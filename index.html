@@ -1,0 +1,542 @@
+<!-- here the whole css and html code is combined -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Rock Crystal Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        body {
+        margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+        }
+
+
+        /* Header and Hero Section Combined */
+        .header-hero {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(image5.jpg);
+            /* Add your navbar image */
+            background-size: cover;
+            filter: blur(18px);
+            z-index: 1;
+        }
+
+        /* Navbar styling */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            height: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Logo */
+        .logo img {
+            margin-top: 10px;
+            height: 50px;
+            width: auto;
+        }
+
+        /* Nav Links */
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            margin-left: 20rem;
+
+
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* Shopping Bag Icon */
+        .shopping-bag {
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 4rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(image5.jpg);
+            /* Add your hero section image */
+            background-size: cover;
+            filter: blur(5px);
+            z-index: 1;
+        }
+
+        .hero-text {
+            flex: 1;
+            text-align: left;
+            color: white;
+            padding-right: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text h2 {
+            /* font-size: 2.5rem; */
+            margin-bottom: 1rem;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin: 0;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            margin: 0;
+
+        }
+
+        .hero-text1 h2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero-text1 h1 {
+            margin-bottom: 20px;
+        }
+
+        .hero-text2 p {
+            margin-top: 2px;
+        }
+
+        .hero-text button {
+            margin-top: 2rem;
+            background-color: white;
+            color: #0a3643;
+            font-weight: bold;
+            border-radius: 20px;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            z-index: 2;
+            /* background-color: whitesmoke; */
+        }
+
+        .hero-image img {
+            background-color: white;
+            padding: 50px;
+            max-height: 180px;
+            border-radius: 20px;
+            margin-right: 50px;
+        }
+
+        /* Product Section */
+        .product-section {
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .product-section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .product-section h3 {
+            color: rgb(38, 38, 91);
+            font-size: 2rem;
+            margin: 0;
+            margin-left: 44%;
+        }
+
+        /* Filter Box */
+        .filter-box {
+            display: flex;
+            gap: 10px;
+            /* background-color: #f7f7f7; */
+            background-color: rgba(158, 148, 148, 0.607);
+            border-radius: 5px;
+            padding: 10px 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            margin-top: 40px;
+            margin-right: 30px;
+
+
+        }
+
+        .filter-box select {
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: transparent;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            color: rgb(38, 38, 91);
+        }
+
+        .filter-box button:hover {
+            background-color: #a3d8eb;
+        }
+
+        /* Products */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: rgb(237, 245, 244);
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(75, 50, 50, 0.2);
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 10rem;
+            border-radius: 10px;
+            height: auto;
+        }
+
+        .product-card h4 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-card button {
+            background-color: #ffff;
+            color: rgb(119, 200, 251);
+            border: 2px solid lightskyblue;
+            padding: 10px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product-card button:hover {
+            background-color: lightskyblue;
+            color: whitesmoke;
+        }
+
+        /* last section */
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px;
+            border-radius: 10px;
+            /* box-shadow: 0 4px 12px rgba(21, 18, 18, 0.1); */
+            max-width: 1200px;
+            margin: 20px auto;
+
+        }
+
+        .content {
+            flex: 1;
+            padding-right: 20px; 
+        }
+
+        .best-price {
+            font-size: 24px;
+            color: #4a6572;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .title {
+           
+            margin-top: 0px;
+            font-size:60px;
+            color: #243447;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .price {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+        
+        .best-price, .price, .btn{
+            margin-left: 40%;
+        }
+        
+        .best-price, .btn{
+            margin-left: 60%;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #a0a0a0;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .new-price {
+            font-size: 60px;
+            color: #c85247;
+            font-weight: 700;
+        }
+
+        .description {
+            font-size: 16px;
+            line-height: 1.5;
+            color: rgb(38, 38, 91);
+            margin-bottom: 20px;
+            margin-right: 50px;
+            margin-left: 100px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: white;
+            color: lightskyblue;
+            border: 2px solid lightskyblue;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: lightskyblue;
+            color: white;
+        }
+
+        /* Image section */
+        .image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 20px;
+            /* box-shadow: 0 4px 12px rgba(21, 18, 18, 0.1); */
+        }
+
+        .image img {
+            max-width: 250px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(21, 18, 18, 0.1);
+            padding: 120px 100px;
+            background-color: rgb(231, 236, 238);
+            
+        }
+
+
+        /* Footer */
+        footer {
+            background-color: lightskyblue;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-hero">
+        
+        <nav>
+            <div class="logo">
+                <img src="image3.png" alt="Logo">
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+            <div class="shopping-bag">
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-text">
+                <div class="hero-text1">
+                    <h2>Welcome to </h2>
+                    <h1>Pop Rock Crystal Shop!</h1>
+                </div>
+                <div class="hero-text2">
+                    <p>Here you will unique phone accessories,crystal,</p>
+                    <p>jewelery and more. Free shipping inside the US and our</p>
+                    <p>phone grip comes with a limited warranty.Enjoy!</p>
+                </div>
+                <button>Shop Now</button>
+            </div>
+            <div class="hero-image">
+                <img src="image1.png" alt="Crystals">
+            </div>
+        </section>
+    </div>
+
+    <div class="product-section">
+        <!-- Header for All Products and Filter Box -->
+        <div class="product-section-header">
+            <h3>All Products</h3>
+            <div class="filter-box">
+                <select>
+                    <option value="">Filter</option>
+                    <option value="all">All Products</option>
+                    <option value="selling">Best Selling</option>
+                    <option value="new">New Arrivals</option>
+                    <option value="popular">Most Popular</option>
+                </select>
+                <select>
+                    <option value="">Sort</option>
+                    <option value="">Higher to low</option>
+                    <option value="">Lower to high</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="products">
+            <div class="product-card">
+                <img src="image1.png" alt="Product 1">
+                <h4>Crystal Agate Phone Grip</h4>
+                <p>$10.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="image1.png" alt="Product 2">
+                <h4>Crystal Agate Phone Grip</h4>
+                <p>$15.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="image1.png" alt="Product 3">
+                <h4>Crystal Agate Phone Grip</h4>
+                <p>$20.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="image1.png" alt="Product 4">
+                <h4>Crystal Agate Phone Grip</h4>
+                <p>$25.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="image1.png" alt="Product 5">
+                <h4>Crystal Agate Phone Grip</h4>
+                <p>$30.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="image1.png" alt="Product 6">
+                <h4>Crystal Agate Phone Grip</h4>
+                <p>$35.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="image1.png" alt="Product 7">
+                <h4>Crystal Agate Phone Grip</h4>
+                <p>$40.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="image1.png" alt="Product 8">
+                <h4>Crystal Agate Phone Grip</h4>
+                <p>$45.00</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- last section -->
+    <div class="container">
+        <div class="content">
+            <h2 class="best-price">BEST PRICE</h2>
+            <h1 class="title">Agate Phone Grip</h1>
+            <div class="price">
+                <span class="old-price">$44.50</span>
+                <span class="new-price">$19.50</span>
+            </div>
+            <p class="description">
+                These Pop Rock Crystal grip tops can be swapped with other tops depending on your mood, outfit, nails,
+                phone case, holiday, etc.! Just gently squeeze the sides to and swap out with our
+                design!
+            </p>
+            <a href="#" class="btn">BUY NOW</a>
+        </div>
+        <div class="image">
+            <img src="image1.png" alt="Agate Phone Grip">
+        </div>
+    </div>
+
+
+
+    <footer>
+        <p>&copy; 2024 Pop Rock Crystal Shop. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
